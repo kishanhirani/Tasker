@@ -5,7 +5,7 @@ const rootRouter = require('./routes/index');
 const app = express();
 app.use(express.json());
 
-mongoose.connect('mongodb://localhost:27017/Tasker')
+mongoose.connect('mongodb+srv://devkishanhirani:Omen1234@nemeton.hmyoo.mongodb.net/')
     .then(() => console.log('Connected to MongoDB'))
     .catch((err) => console.error('Error connecting to MongoDB:', err));
 
