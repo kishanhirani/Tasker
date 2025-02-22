@@ -8,6 +8,7 @@ const userSchema = new mongoose.Schema({
         type: String,
         unique: true,
     },
+    salt: String
 })
 const user = mongoose.model('user', userSchema)
 module.exports = user

@@ -4,8 +4,9 @@ const rootRouter = require('./routes/index');
 
 const app = express();
 app.use(express.json());
-
-mongoose.connect('mongodb+srv://kishanhirani79:Omen1234@cluster0.ip2jaux.mongodb.net/test?retryWrites=true')
+const isLive = 0
+const MongoUrl = isLive ? 'mongodb+srv://kishanhirani79:Omen1234@cluster0.ip2jaux.mongodb.net/test?retryWrites=true' : "mongodb://localhost:27017/"
+mongoose.connect("mongodb://localhost:27017/")
     .then(() => console.log('Connected to MongoDB'))
     .catch((err) => console.error('Error connecting to MongoDB:', err));
 
